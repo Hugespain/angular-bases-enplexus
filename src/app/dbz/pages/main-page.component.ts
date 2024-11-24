@@ -27,7 +27,11 @@ export class MainPageComponent  {
 
     onNewCharacter(character:Character):void{
       this.characters.push(character);
+    }
 
+    //TODO:
+    onDeleteCharacter(indice:number){
+      this.characters.splice(indice);
     }
 
 

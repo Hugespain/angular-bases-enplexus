@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -13,6 +13,15 @@ export class ListComponent {
     {
       name:'Trunks',
       power: 10,
-
     }];
+
+  @Output()
+  public onNewIndice: EventEmitter<number>= new EventEmitter<number>();
+
+  emitIndice(indice:number):void{
+    this.onNewIndice.emit(indice);
+
+  }
+
+
  }
