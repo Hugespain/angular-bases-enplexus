@@ -16,7 +16,7 @@ export class ListComponent {
     }];
 
   @Output()
-  public onNewIndice: EventEmitter<number>= new EventEmitter<number>();
+  public onNewIndice: EventEmitter<number>= new EventEmitter();
 
   emitIndice(indice:number):void{
     this.onNewIndice.emit(indice);
