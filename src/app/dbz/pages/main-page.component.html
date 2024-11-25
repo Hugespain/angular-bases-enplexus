@@ -6,7 +6,7 @@
   <div class="col">
     <app-dbz-list
     [characterList]="dbzService.characters"
-    (onNewIndice)="dbzService.onDeleteCharacter($event)">
+    (onNewId)="dbzService.deleteCharacterById($event)">
   </app-dbz-list> <!--Corchetes enlace de propiedad-->
   </div>
 

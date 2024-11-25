@@ -16,10 +16,11 @@ export class ListComponent {
     }];
 
   @Output()
-  public onNewIndice: EventEmitter<number>= new EventEmitter();
+  public onNewId: EventEmitter<string>= new EventEmitter();
 
-  emitIndice(indice:number):void{
-    this.onNewIndice.emit(indice);
+  emitId(id?:string):void{
+    if(!id) return;
+    this.onNewId.emit(id);
 
   }
 
